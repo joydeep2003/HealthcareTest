@@ -59,7 +59,7 @@ def explanation(image):
 
     # plt.show()  *************************************************
     print("Here 2")
-    plt.savefig('D:\\Projects & Assignments\\Software Engeneering\\testing\\new2\\healthcare\\Frontend\\public\\final_image.png')
+    plt.savefig('C:\\Users\\91983\\OneDrive\\Desktop\\Joydeep\\HealthcareTest\\Frontend\\public\\final_image.png')
     plt.close()
     print("Here 3")
     # return 'final_image.png'

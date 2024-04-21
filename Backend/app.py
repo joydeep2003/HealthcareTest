@@ -181,36 +181,6 @@
 #         return JSONResponse(status_code=500, content={"message": f"An error occurred: {str(e)}"})
 
 # [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-from fastapi import FastAPI, File, UploadFile, HTTPException,Form
-from fastapi.responses import JSONResponse
-from schemas import ImageUploadResponse, ErrorResponse, ImageUpload
-import tensorflow as tf
-import numpy as np
-import os
-from PIL import Image
-# import PIL
-from io import BytesIO
-import torch
-import utils
-import exp
-# import torch
-import torchvision
-from captum.attr import * #captun is the library in torch comprises of several explaination module. In our case we're using 'Occulsion'
-from torchvision import transforms
-import matplotlib.pyplot as plt
-from fastapi.middleware.cors import CORSMiddleware
-app = FastAPI()
-
-origins = ["*"]
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Load the pre-trained model
 # MODEL_PATH = 'pneumoniaAndCovid.h5'
@@ -277,13 +247,42 @@ app.add_middleware(
 #         explanation = exp.explanation(stored_image)
 
 #     return {"explanation": explanation}
-
+from fastapi import FastAPI, File, UploadFile, HTTPException,Form
+from fastapi.responses import JSONResponse
+from schemas import ImageUploadResponse, ErrorResponse, ImageUpload
+import tensorflow as tf
+import numpy as np
+import os
+from PIL import Image
+# import PIL
+from io import BytesIO
+import torch
+import utils
+import exp
+# import torch
+import torchvision
+from captum.attr import * #captun is the library in torch comprises of several explaination module. In our case we're using 'Occulsion'
+from torchvision import transforms
+import matplotlib.pyplot as plt
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from PIL import Image
 from io import BytesIO
 
 
 app = FastAPI()
+
+origins = ["*"]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.post("/upload/")
 async def upload_file(file: UploadFile = Form(None),email:str = Form(None)):
