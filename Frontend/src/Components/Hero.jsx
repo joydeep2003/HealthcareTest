@@ -1,55 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import { auth, provider } from "./Config.jsx";
-// import { signInWithPopup } from "firebase/auth";
-// import Diagnose from './Diagnose.jsx';
-// import { useNavigate } from 'react-router-dom';
-
-// const Hero = () => {
-//   const navigate = useNavigate();
-//   const [value, setValue] = useState('');
-
-//   const handleClick = () => {
-//     signInWithPopup(auth, provider).then((data) => {
-//       setValue(data.user.email);
-//       localStorage.setItem("email", data.user.email);
-//       navigate('/Diagnose');
-//     });
-//   };
-
-//   useEffect(() => {
-//     setValue(localStorage.getItem('email'));
-//   }, []);
-
-//   return (
-//     <div className="bg-blue-50 py-20 px-4 md:px-0 flex items-center">
-//       <div className="max-w-4xl mx-auto">
-//         <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-//           <div className="text-left md:text-center md:mr-12">
-//             <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold text-gray-800 mb-4" style={{ fontFamily: "'Roboto Slab', serif" }}>
-//               Welcome to HealthLens
-//             </h1>
-//             <p className="text-xl md:text-2xl lg:text-4xl font-light text-gray-600 mb-8" style={{ fontFamily: "'Open Sans', sans-serif" }}>
-//               From Shadows to Clarity: Your Health Deciphered.
-//             </p>
-//             <button onClick={handleClick} className="bg-blue-500 hover:bg-blue-200 text-white font-bold text-lg md:text-xl lg:text-2xl py-5 px-12 rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-//               Diagnose
-//             </button>
-//           </div>
-//           <div className="hidden md:block w-596 h-896 bg-transparent ml-12">
-//             <img src="public\doctor.png" alt="HealthLens Image" className="object-contain" style={{ width: '300%', height: '300%', maxWidth: '300%', position: 'relative', left: '-124%' }} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hero;
-
-
-
-
-
 // Import necessary Firebase modules
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -161,7 +109,7 @@ const Hero = () => {
 
       {/* Login form modal */}
       {showLogin && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75" style={{zIndex:"100"}}>
           <div className="bg-white p-8 rounded-lg max-w-md relative">
             <button onClick={() => setShowLogin(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
