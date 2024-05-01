@@ -6,6 +6,8 @@ import About from './Components/About';
 import Testimonials from './Components/Testimonial';
 import Footer from './Components/Footer';
 import Diagnose from './Components/Diagnose';
+// import Chat from './Components/chatMessage';
+
 
 function App() {
   return (
