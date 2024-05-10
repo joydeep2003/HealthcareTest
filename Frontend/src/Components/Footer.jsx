@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
 
       {/* Right side */}
-      <div className="text-lg text-gray-600">STAY IN TOUCH
+      <div className="text-lg text-gray-600">
 
         <div className="flex space-x-2">
           <a href="#" aria-label="Instagram"><FaInstagram /></a>
