@@ -60,24 +60,27 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-blue-50 py-20 px-4 md:px-0 flex items-center">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div className="text-left md:text-center md:mr-12">
-            <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold text-gray-800 mb-4" style={{ fontFamily: "'Roboto Slab', serif" }}>
+    <div className=" py-20 px-4 md:px-0 flex items-center background flex justify-around">
+      <div className="">
+        <div className="flex justify-around">
+          <div className="text-left md:text-center md:mr-7">
+            <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold text-gray-800 mb-6 text-white" style={{ fontFamily: "'Roboto Slab', serif" }}>
               Welcome to HealthLens
             </h1>
-            <p className="text-xl md:text-2xl lg:text-4xl font-light text-gray-600 mb-8" style={{ fontFamily: "'Open Sans', sans-serif" }}>
-              From Shadows to Clarity: Your Health Deciphered.
+            
+            <p className="text-xl md:text-2xl lg:text-4xl font-semibold text-gray-600 mb-2 text-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+              From Shadows to Clarity:
+            </p>
+            <p className="text-xl md:text-2xl lg:text-4xl font-semibold text-gray-600 mb-10 text-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+              Your Health Deciphered.
             </p>
             <button onClick={() => setShowSignup(true)} className="bg-blue-500 hover:bg-blue-200 text-white font-bold text-lg md:text-xl lg:text-2xl py-5 px-12 rounded-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
               Diagnose
             </button>
           </div>
-          <div className="hidden md:block w-596 h-896 bg-transparent ml-12">
-            {/* Add your image here */}
-            <img src="public\doctor.png" alt="HealthLens Image" className="object-contain" style={{ width: '300%', height: '300%', maxWidth: '300%', position: 'relative', left: '-124%' }} />
-          </div>
+          {/* <div className="hidden md:block bg-transparent mr-36">
+            <img className='h-[400px] w-[420px] rounded' src="/homepageimage.png" alt="HealthLens Image"   />
+          </div> */}
         </div>
       </div>
 
@@ -109,7 +112,7 @@ const Hero = () => {
 
       {/* Login form modal */}
       {showLogin && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75" style={{zIndex:"100"}}>
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
           <div className="bg-white p-8 rounded-lg max-w-md relative">
             <button onClick={() => setShowLogin(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
